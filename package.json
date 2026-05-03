@@ -1,0 +1,30 @@
+{
+  "name": "blood-donation-finder",
+  "version": "1.0.0",
+  "description": "A full-stack web application connecting blood donors with hospitals during medical emergencies",
+  "main": "backend/server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=backend\" \"npm run dev --workspace=frontend\"",
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspace=frontend",
+    "install:all": "npm install && npm install --workspace=backend && npm install --workspace=frontend"
+  },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "keywords": [
+    "blood-donation",
+    "emergency-finder",
+    "react",
+    "nodejs",
+    "postgresql",
+    "drizzle-orm"
+  ],
+  "author": "Hamad Karim, Faaez Mugse, Uzair Mustafa",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
